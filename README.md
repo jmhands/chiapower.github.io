@@ -1,3 +1,8 @@
+# Chia power
+
+Chia power is the working model for estimating power consumption on the Chia network, written by Jonmichael Hands, Sr. Strategic Planner at Intel corporation.
+
+
 # Lanyon
 
 Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
