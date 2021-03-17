@@ -2,7 +2,7 @@
 title:               Chia Power
 tagline:             'Chia energy consumption index'
 description:         'Storage power consumption model to estimate the energy usage of the Chia blockchain'
-url:                 https://chiapower.org
+url:                 https://jmhands.github.io/chiapower.github.io/
 baseurl:             ''
 paginate:            5
 permalink:           pretty

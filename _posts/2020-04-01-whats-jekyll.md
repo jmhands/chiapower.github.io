@@ -1,12 +1,8 @@
 ---
 layout: post
-title: What's Jekyll?
+title: Introducing chiapower
 ---
 
-[Jekyll](https://jekyllrb.com) is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From [the project's readme](https://github.com/mojombo/jekyll/blob/master/README.markdown):
+**Summary
 
-  > Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.
-
-It's an immensely useful tool and one we encourage you to use here with Lanyon.
-
-Find out more by [visiting the project on GitHub](https://github.com/mojombo/jekyll).
+The total power consumption on the Chia network can be estimated by taking the total netspace (similar to hashing power in bitcoin) and modeling the power consumption of the storage devices (farming) and the energy created to create the data (plotting). This is a similar methodology to the Cambridge Bitcoin Electricity Consumption Index, where most likely mining hardware is known, and electricity cost is estimated, and the total power consumption of the bitcoin network is estimated using a low and high estimate of reference mining hardware. Estimating a mix of common reference hardware farmers using hard disk drives (HDDs) and solid state drives (SSDs) by what is economical for Chia farming will depend on the capital expenditures of the hardware (CapEx) and operational expenditures for power, cooling, networking, and data center efficiency. Storage power efficiency is measured in TB/W which includes the overhead of the supporting hardware infrastructure to host the storage devices, but the largest upfront cost in Chia farming is the cost of the storage devices themselves. The Chia network also consumes energy during the plotting process, of which the cryptographic data is generated prior to being able to farm for the proof of space and time.
