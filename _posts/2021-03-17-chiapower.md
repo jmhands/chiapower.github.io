@@ -21,7 +21,7 @@ Where TB/W for P ave, low, and high are estimated with the representative farmin
 Total power of the Chia network
 ![equation](https://jmhands.github.io/chiapower.github.io/assets/image5.png "Ptotal")
 Annual energy consumption
-![equation](https://jmhands.github.io/chiapower.github.io/assets/image6.png "Etotal")
+![equation](https://jmhands.github.io/chiapower.github.io/assets/image6.png "Etotal")![equation](https://jmhands.github.io/chiapower.github.io/assets/image7.png "Etotal2")
 
 | Parameter                   | Description                                          | Unit            | Source                                                                          |
 |-----------------------------|------------------------------------------------------|-----------------|---------------------------------------------------------------------------------|
