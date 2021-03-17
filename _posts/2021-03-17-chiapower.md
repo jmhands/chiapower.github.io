@@ -25,13 +25,13 @@ Annual energy consumption
 
 | Parameter                   | Description                                          | Unit            | Source                                                                          |
 |-----------------------------|------------------------------------------------------|-----------------|---------------------------------------------------------------------------------|
-| Netspace                    | Total amount of farming capacity on the Chia network | EiB (Exbibyte)  | "Chia network, Chia explorer"                                                   |
-| HDD ave capacity            | Average capacity hard disk drive                     | TB (Terabytes)  | "Source: IDC Worldwide Hard Disk Drive Forecast Update, 2020–2024, Dec 2020"    |
+| Netspace                    | Total amount of farming capacity on the Chia network | EiB (Exbibyte)  | Chia network, [Chia explorer](https://www.chiaexplorer.com/)                    |
+| HDD ave capacity            | Average capacity hard disk drive                     | TB (Terabytes)  | Source: IDC Worldwide Hard Disk Drive Forecast Update, 2020–2024, Dec 2020      |
 | Plotting energy consumption | Average energy consumption to create 1TiB of plots   | kWh/TiB of data | Chia community reference hardware                                               |
 | Device power consumption    | The idle power of storage device                     | W/TB            | Modeled by device type for SSD and HDD                                          |
-| E low                       | "Energy consumption, most efficient hardware (SSD)"  | kWh             | "Farming on low power SSDs, extra space from consumer storage"                  |
+| E low                       | Energy consumption, most efficient hardware (SSD)    | kWh             | Farming on low power SSDs, extra space from consumer storage                    |
 | E ave                       | Energy consumption mainstream high capacity farmer   | kWh             | Estimated hyperscale like efficiency purpose built for data storage and farming |
-| E high                      | Energy consumption worst case (low capacity HDD)     | kWh             | "Estimated with 3-4TB HDDs on a consumer desktop, lowest device CapEx"          |
+| E high                      | Energy consumption worst case (low capacity HDD)     | kWh             | Estimated with 3-4TB HDDs on a consumer desktop, lowest device CapEx            |
 
 Total storage market size in Exabytes. The power consumption of the Chia network is a small portion of the overall total storage market size, and improved efficiencies in farming devices will further reduce  total energy consumption for mass storage and would result in a net positive impact for the environment.
 
