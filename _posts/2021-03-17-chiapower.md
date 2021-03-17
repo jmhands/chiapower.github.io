@@ -8,16 +8,16 @@ title: Introducing chiapower
 The total power consumption on the Chia network can be estimated by taking the total netspace (similar to hashing power in bitcoin) and modeling the power consumption of the storage devices (farming) and the energy created to create the data (plotting). This is a similar methodology to the Cambridge Bitcoin Electricity Consumption Index, where most likely mining hardware is known, and electricity cost is estimated, and the total power consumption of the bitcoin network is estimated using a low and high estimate of reference mining hardware. Estimating a mix of common reference hardware farmers using hard disk drives (HDDs) and solid state drives (SSDs) by what is economical for Chia farming will depend on the capital expenditures of the hardware (CapEx) and operational expenditures for power, cooling, networking, and data center efficiency. Storage power efficiency is measured in TB/W which includes the overhead of the supporting hardware infrastructure to host the storage devices, but the largest upfront cost in Chia farming is the cost of the storage devices themselves. The Chia network also consumes energy during the plotting process, of which the cryptographic data is generated prior to being able to farm for the proof of space and time.
 
 Energy consumption in kWh can be calculated by assuming an estimated percentage of the network using consumer hardware with spare capacity (under utilized resources already owned), which happen to be very efficient due to the transition in mainstream computing devices to SSDs over the last decade, as well as the percent of dedicated farmers that are using dense storage configurations with data center grade equipment.
-![equation](/assets/image1.png "Elow")
-![equation](/assets/image2.png "Ehigh")
-![equation](/assets/image3.png "Eave")
+![equation](https://jmhands.github.io/chiapower.github.io/assets/image1.png "Elow")
+![equation](https://jmhands.github.io/chiapower.github.io/assets/image2.png "Ehigh")
+![equation](https://jmhands.github.io/chiapower.github.io/assets/image3.png "Eave")
 
 Where TB/W for P ave, low, and high are estimated with the representative farming equipment efficiency.
-![equation](/assets/image4.png "TB/W")
+![equation](https://jmhands.github.io/chiapower.github.io/assets/image4.png "TB/W")
 Total power of the Chia network
-![equation](/assets/image5.png "Ptotal")
+![equation](https://jmhands.github.io/chiapower.github.io/assets/image5.png "Ptotal")
 Annual energy consumption
-![equation](/assets/image6.png "Etotal")
+![equation](https://jmhands.github.io/chiapower.github.io/assets/image6.png "Etotal")
 
 | Parameter                   | Description                                          | Unit            | Source                                                                          |
 |-----------------------------|------------------------------------------------------|-----------------|---------------------------------------------------------------------------------|
