@@ -46,11 +46,11 @@ Source: [Feeding the Pelican: Using Archival Hard Drives for Cold Storage Racks]
 
 ![HDD Power](https://jmhands.github.io/chiapower.github.io/assets/powerw_tb.svg "Power W/TB")
 
-|            | Consumer NVMe | Data Center NVMe | Data Center SATA | HDD 7200 | HDD 7200 | HDD 5400 | HDD 5400 | HDD 4TB 7200 | HDD 2TB 7200 |
-|------------|---------------|------------------|------------------|----------|----------|----------|----------|--------------|--------------|
-| Power Idle | 0.05          | 3.5              | 1.1              | 5.9      | 5.9      | 3.5      | 2.5      | 5            | 5            |
-| Capacity   | 4             | 30.72            | 3.84             | 18       | 16       | 8        | 4        | 4            | 2            |
-| W/TB idle  | 0.01          | 0.11             | 0.29             | 0.33     | 0.37     | 0.44     | 0.63     | 1.25         | 2.50         |
+|                 | Consumer NVMe | Data Center NVMe | Data Center SATA | HDD 7200 | HDD 7200 | HDD 5400 | HDD 5400 | HDD 4TB 7200 | HDD 2TB 7200 |
+|-----------------|---------------|------------------|------------------|----------|----------|----------|----------|--------------|--------------|
+| Power Idle (W)  | 0.05          | 3.5              | 1.1              | 5.9      | 5.9      | 3.5      | 2.5      | 5            | 5            |
+| Capacity (TB)   | 4             | 30.72            | 3.84             | 18       | 16       | 8        | 4        | 4            | 2            |
+| W/TB idle       | 0.01          | 0.11             | 0.29             | 0.33     | 0.37     | 0.44     | 0.63     | 1.25         | 2.50         |
 
 ## Power consumption for majority of large Chia farmers
 The majority of nearline and high capacity HDDs are consumed by hyperscale data centers and large cloud service providers, where designing around lowest possible data center TCO is the ultimate goal. TCO is measured in TCO$/TBe/rack/month, where TCO is the sum of the total capital and operational expenditures ammorized of the effective or usable capacity of the storage system. The Chia power model utilizes a similar model assuming the most efficient way to store data is already widely being used.  Optimizing disk storage TCO involves getting the highest capacity HDDs, which offer the highest energy efficiency in terms of TB/W, as well as densely packed JBODs (just a bunch of disks) measured in TB/rack unit. Different architectures for warm storage (more frequently accessed) vs cold storage (archival, less frequently accessed) vary mostly around the amount of compute to storage ratio. Chia farming looks very similar to hyperscale HDD archival storage requiring minimum compute resources and networking resources for the actual harvester and farming protocols. Hyperscalers like [Facebook](https://www.usenix.org/conference/fast21/presentation/pan) and Microsoft have written about their storage systems extensively because the [JBOD hardware designs](https://www.opencompute.org/documents/facebook-bryce-canyon-storage-system-specification) hardware designs are open source at the [Open Compute Project](https://www.opencompute.org/).
