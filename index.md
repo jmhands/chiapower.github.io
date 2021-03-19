@@ -5,12 +5,12 @@ title: Chia Power - Estimate of total energy consumption in the Chia network
 
 Chia power is the working model for estimating power consumption on the Chia network, written by Jonmichael Hands, Sr. Strategic Planner at Intel corporation. You can find him on Keybase as @Storage_jm
 
-[Chia Network](https://www.chia.net/)
 ![chia logo](https://jmhands.github.io/chiapower.github.io/assets/chia_logo.svg "Chia Network")
+[Chia Network](https://www.chia.net/)
 
 # Summary
 
-[working model](https://docs.google.com/spreadsheets/d/1ytkoezTa2jqzolOJAj1-p2oFGiPQ0ocLpr78r8AhdLM/edit?usp=sharing)
+This is a link to a [working model](https://docs.google.com/spreadsheets/d/1ytkoezTa2jqzolOJAj1-p2oFGiPQ0ocLpr78r8AhdLM/edit?usp=sharing) that estimates netspace growth based on current initial estimate, growth rate, and total storage market size for the upper limit of growth.
 
 The total power consumption on the Chia network can be estimated by taking the total netspace (similar to hashing power in bitcoin) and modeling the power consumption of the storage devices (farming) and the energy created to create the data (plotting). This is a similar methodology to the Cambridge Bitcoin Electricity Consumption Index, where most likely mining hardware is known, and electricity cost is estimated, and the total power consumption of the bitcoin network is estimated using a low and high estimate of reference mining hardware. Estimating a mix of common reference hardware farmers using hard disk drives (HDDs) and solid state drives (SSDs) by what is economical for Chia farming will depend on the capital expenditures of the hardware (CapEx) and operational expenditures for power, cooling, networking, and data center efficiency. Storage power efficiency is measured in TB/W which includes the overhead of the supporting hardware infrastructure to host the storage devices, but the largest upfront cost in Chia farming is the cost of the storage devices themselves. The Chia network also consumes energy during the plotting process, of which the cryptographic data is generated prior to being able to farm for the proof of space and time.
 
