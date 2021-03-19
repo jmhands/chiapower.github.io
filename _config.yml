@@ -16,6 +16,7 @@ author:
 # Gems
 plugins:
   - jekyll-paginate
+gems:
   - jekyll-sitemap
 
 # Custom vars
