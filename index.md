@@ -5,7 +5,8 @@ title: Chia Power - Estimate of total energy consumption in the Chia network
 
 Chia power is the working model for estimating power consumption on the Chia network, written by Jonmichael Hands, Sr. Strategic Planner at Intel corporation. You can find him on Keybase as @Storage_jm
 
-![chia logo](https://jmhands.github.io/chiapower.github.io/assets/chia_logo.svg "Chia Network")(https://www.chia.net)
+[Chia Network](https://www.chia.net/)
+![chia logo](https://jmhands.github.io/chiapower.github.io/assets/chia_logo.svg "Chia Network")
 
 # Summary
 
