@@ -12,16 +12,14 @@ Chia is the solution to the "Proof of Work" energy problem
 
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQTo_q1WX68ONeRJZuHsdueYfgv71o3qmrXCwNQ-UScBSmLuHI781iRMXpsVntueyI2-DpS_PHpK6oK/pubchart?oid=1357003038&amp;format=interactive"></iframe>
 
-# Summary
-
 Rev 2.0 Changelog
 
-* More than 3 months of observed Netspace growth and observations
-* Initial growth (phase 1) of the Chia network was dominated by newly purchased high capacity 3.5in nearline HDDs, by early adopter farmers (Source: IDC, Seagate, WD). Avg capacity could be as high as 15TB
-* Phase 2 of growth will be dominated by smaller farmers, pools, coming mostly from underutilized storage (Source: IDC)
-* Include 6 & 8TB into low cap avg range for power consumption
-* Integrate plotting power into energy consumption by assuming the life of a plot and amortizing the energy used to create it over the lifetime of the plot. Use real measured data and power consumption of chia community plotters to get a range for power consumption
-* Add annual energy in TWh, compare vs BTC & ETH using [digiconimist ](https://digiconomist.net/bitcoin-energy-consumption)([cbeci](https://cbeci.org/) still great but recent China policy changes not reflected in annual consumption avg)
+- More than 3 months of observed Netspace growth and observations
+- Initial growth (phase 1) of the Chia network was dominated by newly purchased high capacity 3.5in nearline HDDs, by early adopter farmers (Source: IDC, Seagate, WD). Avg capacity could be as high as 15TB
+- Phase 2 of growth will be dominated by smaller farmers, pools, coming mostly from underutilized storage (Source: IDC)
+- Include 6 & 8TB into low cap avg range for power consumption
+- Integrate plotting power into energy consumption by assuming the life of a plot and amortizing the energy used to create it over the lifetime of the plot. Use real measured data and power consumption of chia community plotters to get a range for power consumption
+- Add annual energy in TWh, compare vs BTC & ETH using [digiconimist ](https://digiconomist.net/bitcoin-energy-consumption)([cbeci](https://cbeci.org/) still great but recent China policy changes not reflected in annual consumption avg)
 
 This is a link to a [working model](https://docs.google.com/spreadsheets/d/1ytkoezTa2jqzolOJAj1-p2oFGiPQ0ocLpr78r8AhdLM/edit?usp=sharing) (includes legacy calculations and estimates in other tabs)
 
@@ -64,18 +62,15 @@ We use a representative farming model, which we will go into detail, that includ
 | Power low-cap               | Using recycled or used HDDs                                        | Megawatt (MW)   | assume 5 years old, an average of 4-8TB                                                                            |
 | Power underutilized         | Coming from consumers with underutilized storage capacity          | Megawatt (MW)   | IDC on Chia                                                                                                        |
 
-#### Modeling Device Power Consumption - W/TB
+### Modeling Device Power Consumption - W/TB
 
 The power consumption used to estimate per disk power is very close to the hard drive specification of idle power. The Chia farming process is very lightweight, requiring very little disk io and further reduced in the [new consensus](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/) through a mechanism called the plot filter. Although the amount of data transferred is very low, the frequency of data access depends on the size of the plots constructed and number of plots per drive (capacity per disk), measured with a K value, with the minimum K value = 32 consisting of ~108GB (~101GiB. Most farmers use the minimum required K value for the network operation due to the ease of plotting, so the probability a single plot per disk passes the filter is very high, requiring the disk to be accessed frequently.
 
 Analysis has shown that during the Chia farming workload on an 18TB HDD with n=165 plots, the HDD was idle 99.7% of the time (Source: Western Digital)
 
 Hard drives save power in a few ways. Consumer hard drives sometimes have a lower RPM (5400) vs enterprise or nearline HDDs (7200 rpm), which decreases power consumption from spinning the motor slower. When an HDD is idle for an extended period of time, the device can park the head. One cycle of this is called a load/unload. The actuators on the HDD are not active while the heads are parked and this can save a few W of power.
-
 These can be exactly the same disk, spec’d in two different ways!
-
 NAS HDD idle power = 3.6W
-
 Enterprise HDD idle power = 5.6W
 
 To get to zero idle power, the drive must actually spin down. While it is technically possible for a hard disk drive to spin down to zero idle power between slots, the resume latency from HDD power off or spindown is 10 seconds and HDDs consume higher power to spin up (inrush current) reaching up to 25W for a few seconds. The energy consumed for power up and the mechanical wear and tear on the device make it not practical to spin down the drives in regular use. Power savings on the other mechanical aspects of HDDs, for instance, management of the heads and actuators, are device-specific, while link power states are subject to the host storage interface (both SAS and SATA have detailed power state machines that operate differently)
@@ -98,7 +93,7 @@ The model used to estimate power consumption for disks and supporting infrastruc
 To achieve this goal, high-capacity HDDs must be used due to the large advantage of capacity per rack unit and physical space and power per TB.
 
 
-#### Energy efficiency - Data center PUE
+### Energy efficiency - Data center PUE
 
 Hyperscalers like [Facebook](https://tech.fb.com/hyperefficient-data-centers/) have achieved a world-class PUE of 1.08 and have a large effort in [sustainability](https://sustainability.fb.com/) and renewable energy. We assume most large farmers in the first few years are not optimizing for maximum power efficiency, but just like in Bitcoin over time the power efficiency will gravitate towards the most efficient solutions for power consumption, low cost electricity, and energy efficiency. For this model, we have assumed a mid-range best guess estimate consistent with the [CMECI methodology](https://cbeci.org/cbeci/methodology) to ensure a consistent comparison. There will certainly be a large range of efficiencies with Chia farmers.
 
@@ -115,29 +110,20 @@ The power estimation for low-cap assumes a weighted average of 4TB, 6TB, and 8TB
 In June of 2021 IDC released the report on Chia, titled _Chia Cryptocurrency Farming Is Real and Uses Lots of Storage. _Bram Cohen, CEO and founder of Chia Network, had a hypothesis when he started Chia that there was a large amount of underutilized storage in the world, and this storage could be used to secure the network for the Chia blockchain using proof of space and time. IDC confirmed this hypothesis.
 
 “IDC believes that consumer-owned DT PCs and PS devices equipped with HDDs do represent a nearterm addressable TAM for storing Chia plots. IDC's Global StorageSphere research indicates that, in CY21, approximately 195EB of available storage capacity exists in the installed base of consumer DT PCs, plus roughly 310EB of storage capacity is available in the installed base of HDD-based consumer PS devices.”
-
 Source: IDC Market Perspective - Chia Cryptocurrency Farming Is Real and Uses Lots of Storage
 
 Important stats used for modeling the power use for underutilized storage
-
 Desktops - PCs using internal HDDs in desktops are only utilizing on average 30% of the hard drive.
-
 External HDDs - PCs with an external HDD attached are only utilizing on average 23% of the hard drive.
-
 These stats are used for the contribution of underutilized storage to the power consumption in the Chia netspace.
-
 The expectation is that with pooling, this storage becomes unlocked for the smaller farmers who wanted to participate in the network but would not have been earning frequent rewards with the large Netspace growth that occurred during Chia phase 1 growth. We expect a large amount of growth in phase 2 to be driven by underutilized storage space. While we will see accelerated HDD demand in response to a large increase of the price of XCH, the marginal cost of the people who already own storage to start farming Chia is very small. With the energy use to farm being very low, and pools being very accessible, this will create the perfect environment for smaller farmers with underutilized space to farm on the Chia network.
-
 In phase 2 growth we estimate a percentage of the network growth coming from underutilized storage based on the price and ROI for Chia farming. The current estimate does not reflect any hard prediction, just used for modeling purposes. We will observe over the next few months
 
 ### SSDs and Chia farming
 
 Solid-state drives are extremely power efficient. Designed for use in laptops and mobile devices for long battery life, NAND and SSD controllers are architected for near-zero idle power consumption. The [NVM Express (NVMe) specification](https://nvmexpress.org/developers/nvme-specification/) for solid-state drives contains various features for [power savings](https://nvmexpress.org/resources/nvm-express-technology-features/nvme-technology-power-features/), with mainstream consumer SSDs ranging from [2-4mW idle power with 5-8mS resume latency](https://www.anandtech.com/show/16012/the-sk-hynix-gold-p31-ssd-review/7). With over 100 million consumer NVMe SSDs shipped alone in 2020, there are tens of millions of 1-2TB SSDs in consumer laptops and desktops, which based on studies done by Intel and other companies is greater than the average amount of data used in mainstream use, productivity, gaming, and workstations. The lower bound estimate is the power consumption for low power SSDs.
-
 With the analysis that was done on the Chia workload showing 99.7% idle time on HDDs, this may be 99.9 or 99.99% on SSDs due to the latency reduction. This means that one can effectively farm Chia with near-zero power consumption on consumer or power-optimized farming SSDs!
-
 It is very possible that we will see some portion of the underutilized space come from SSDs in the coming years, or even dedicated farming optimized consumer SSDs. The average capacity SSD in the channel / retail space is now 1TB, while the capacity in laptops is still only 512GB. This means while 3D NAND capacity increases continue, the average user will have a considerable amount of storage in their laptop that is underutilized.
-
 Current prices of SSDs are 3-6x the $/TB of capacity-optimized hard disk drives. With the majority of the TCO in farming being the $/TB of the storage device, it is unlikely we will see dedicated Chia farming SSDs being used until the price gets to 2-3x that of HDD. With the amount of power savings that can be achieved with consumer SSDs in Chia, we expect a fair amount of innovation in this space in the coming years.
 
 
@@ -159,6 +145,7 @@ No matter who wins this storage war, total power efficiency per given storage ca
 **Reduce power of HDDs through firmware optimizations for Chia**
 
 Current 5400RPM 3.5in HDDs consume less idle power than 7200 RPM drives. An [8TB Seagate ](https://www.seagate.com/www-content/datasheets/pdfs/3-5-barracudaDS1900-14-2007US-en_US.pdf)5400RPM HDD consumes 2.5W (4TB) and 3.4W (8TB) idle power, while competing 7200 RPM drives consume 5-6W idle power. There are likely optimizations to slightly reduce W/TB by taking large-capacity models and running them at a lower motor speed, impacting performance at the tradeoff of energy efficiency.
+
 | Drive Model       | Capacity | Speed    | Idle Power | W/TB  |
 | ----------------- | -------- | -------- | ---------- | ----- |
 | Seagate Barracuda | 8TB      | 5400 RPM | 3.4W       | 0.425 |
