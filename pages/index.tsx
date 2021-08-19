@@ -12,7 +12,7 @@ interface HomeProps {
     [key: string]: any;
   };
   mdxSource: MdxRemote.Source;
-  kwOfNetwork: number;
+  energyConsumption: number;
   lastUpdate: string;
   netspaceHumanString: string;
 }
@@ -23,7 +23,7 @@ export default function Home(props: HomeProps) {
   return (
     <DefaultLayout title={props.metadata.title}>
       <mdxComponents.p>
-        {Math.round(props.kwOfNetwork)} kW is the average power consumption as
+        {props.energyConsumption.toPrecision(3)} TWh is the annual power consumption as
         of {new Date(props.lastUpdate).toLocaleDateString()}, based on the
         current netspace of {props.netspaceHumanString}, as reported by{" "}
         <mdxComponents.a href="https://www.chiastatus.com/">
@@ -57,19 +57,56 @@ export async function getStaticProps(): Promise<
   const netspaceInPib = netspace / 1.126e15;
 
   // Power consumption calc: https://docs.google.com/spreadsheets/d/1ytkoezTa2jqzolOJAj1-p2oFGiPQ0ocLpr78r8AhdLM
-  const kwOfNetwork =
-    (((netspaceInPib * 0.65 * Math.pow(1024, 5)) / Math.pow(1000, 4)) * 0.72) /
-      1000 +
-    (((netspaceInPib * 0.3 * Math.pow(1024, 5)) / Math.pow(1000, 4)) * 2.73) /
-      1000 +
-    (((netspaceInPib * 0.5 * Math.pow(1024, 5)) / Math.pow(1000, 4)) * 0.1) /
-      1000;
+  // Constants
+  const constants = {
+    phase2: {
+      startEib: 31.71,
+      prevAnnualTWh: 0.28,
+
+      highCapPercent: 0.4,
+      lowCapPercent: 0.1,
+      underutilizedPercent: 0.5,
+
+      wPerTbHigh: 0.53,
+      wPerTbLow: 1.45,
+      wPerTbUnderutilized: 0.71,
+
+      kWhToPlot1TB: 1.5,
+      lifeOfPlotInYears: 5,
+    },
+  }
+
+  // remove the Eib this phase started with
+  const netspaceInEib = netspaceInPib / 1024 - constants.phase2.startEib
+
+  const highCapPB =
+    ((netspaceInEib * Math.pow(1024, 6)) / Math.pow(1000, 5)) * constants.phase2.highCapPercent
+  const lowCapPB =
+    ((netspaceInEib * Math.pow(1024, 6)) / Math.pow(1000, 5)) * constants.phase2.lowCapPercent
+  const underutilizedPB =
+    ((netspaceInEib * Math.pow(1024, 6)) / Math.pow(1000, 5)) *
+    constants.phase2.underutilizedPercent
+
+  const powerHighCapMW = (highCapPB * 1000 * constants.phase2.wPerTbHigh) / Math.pow(1000, 2)
+  const powerLowCapMW = (lowCapPB * 1000 * constants.phase2.wPerTbLow) / Math.pow(1000, 2)
+  const powerUnderutilizedMW =
+    (underutilizedPB * 1000 * constants.phase2.wPerTbUnderutilized) / Math.pow(1000, 2)
+  const totalPowerMW = powerHighCapMW + powerLowCapMW + powerUnderutilizedMW
+
+  const annualEnergyPlotMWh =
+    (((netspaceInEib * Math.pow(1024, 6)) / Math.pow(1000, 4)) * constants.phase2.kWhToPlot1TB) /
+    constants.phase2.lifeOfPlotInYears /
+    1000
+
+  const annualEnergyFarmInMWh = totalPowerMW * 24 * 365
+
+  const totalAnnualEnergyInTWh = (annualEnergyPlotMWh + annualEnergyFarmInMWh) / Math.pow(1000, 2)
 
   return {
     props: {
       metadata,
       mdxSource,
-      kwOfNetwork,
+      energyConsumption: totalAnnualEnergyInTWh + constants.phase2.prevAnnualTWh,
       lastUpdate: data.updatedAt,
       netspaceHumanString: data.netspaceHumanString,
     },
