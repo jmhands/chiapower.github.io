@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chiapower.org/blog"/>
     <subtitle>Chiapower Blog</subtitle>
-    <icon>https://chiapower.org/img/chiapower.png</icon>
+    <icon>https://chiapower.org/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Chiapower redesign]]></title>
         <id>redesign</id>

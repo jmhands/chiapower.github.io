@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkchiapower=self.webpackChunkchiapower||[]).push([[6959],{8175:function(e){e.exports=JSON.parse('{"title":"Model","slug":"/category/model","permalink":"/category/model","navigation":{"previous":{"title":"SSD Endurance","permalink":"/reliability/ssdendurance"},"next":{"title":"Chiapower Energy Model","permalink":"/Model/"}}}')}}]);
