@@ -21,7 +21,7 @@ The actual consensus revolves around the process of “farming”. Farmers compe
 
 Chia architecture can be found [here](https://docs.chia.net/docs/02architecture/p2p-system).
 
-- Plotting - creating the proofs of space into a “plot file” requires upfront one-time use of compute resources, so that proofs can be quickly and easily verified later.
-- Harvesting - the harvesters are individual machines controlled by the farmer that continuously and unintrusively check the plot files for proofs of space.
-- Farming - farmers compete to create blocks when a proof of space is found that meets the challenge requirements.
-- Full node - maintains an entire copy of the blockchain, propagates blocks, transactions, and proofs between peers.
+- **Plotting** - creating the proofs of space into a “plot file” requires upfront one-time use of compute resources, so that proofs can be quickly and easily verified later.
+- **Harvesting** - the harvesters are individual machines controlled by the farmer that continuously and unintrusively check the plot files for proofs of space.
+- **Farming** - farmers compete to create blocks when a proof of space is found that meets the challenge requirements.
+- **Full node** - maintains an entire copy of the blockchain, propagates blocks, transactions, and proofs between peers.

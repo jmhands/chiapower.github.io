@@ -1,8 +1,7 @@
 ---
 sidebar_position: 2
+title: Circularity
 ---
-
-## Circularity
 
 Although hyperscale datacenters may not have the immediate availability of underutilized storage, they do refresh their storage systems every 3-5 years to meet growing demand. Cloud data centers assure customers of data security. To avoid any perception of risk, storage devices are typically physically destroyed at the end of first use. Unfortunately, some of the older standards around data sanitization recommend physical destruction for sensitive data when leaving an organization’s control, despite there being a near zero risk for data leaking with modern data encryption and sanitization methods specific to storage devices.
 

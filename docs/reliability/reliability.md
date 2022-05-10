@@ -1,8 +1,7 @@
 ---
 sidebar_position: 1
+title: Reliability of Storage Devices in Chia Farming
 ---
-
-# Reliability of Storage Devices in Chia Farming
 
 Chia is an extremely light workload compared to typical end-user workloads,[ 0.37%](https://docs.chia.net/docs/15resources/Storage_farming) of the lowest HDD rated workload limit of 200TB/year. It is also 309 times lower disk busy time than an example [hyperscale data center workload](https://www.usenix.org/system/files/fast21-pan.pdf). Plot files contain random cryptographic hashes that can easily be created with no user data, removing data durability requirements for data storage in Chia farming. Hard drives, SSDs, or any consumer electronic device, don’t have a rated lifetime, reliability is measured in the annual failure rate or mean time between failure. They do have a warranty, most often 5 years which is used for most LCA ([life cycle assessments](https://www.seagate.com/global-citizenship/product-sustainability/exos-x18-sustainability-report/)). SSDs also have a rated endurance measured in host writes, TBW (terabytes written). HDDs have a rated workload in TB/year for both reads and writes, due to mechanical wear on the drive.
 

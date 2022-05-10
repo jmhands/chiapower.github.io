@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
+title: Storage is Underutilized
 ---
-# Storage is Underutilized
 
 [IDC](https://idcdocserv.com/US47836321) estimated that the average consumer with HDD storage for external backup only utilizes 23% of the capacity. This leaves a tremendous opportunity for storage-based cryptocurrencies to leverage this resource to secure the blockchain while offering the user a reward as an incentive. With Chia farming becoming easier and more accessible, the vision is that any user with extra capacity can easily participate in the Chia network, earn rewards, and quickly reclaim the space needed for user data.
 

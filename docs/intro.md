@@ -1,9 +1,8 @@
 ---
 sidebar_position: 1
 slug: /
+title: Intro
 ---
-
-# Intro
 
 Storage is a perfect medium for blockchain security being both cryptographically [verifiable and scarce](https://docs.chia.net/docs/03consensus/consensus_intro). Storage is a commodity with a large market and multiple major global players. It is power-efficient and scalable and can incentivize the circular economy.
 

@@ -1,12 +1,10 @@
 ---
 sidebar_position: 1
 id: hardware
-title: Hardware
+title: Hardware Resources Required
 description: Chia Hardware
 keywords: [Chia, Farming, Hardware, cryptocurrencies]
 ---
-
-# Hardware Resources Required
 
 A participant can join the network with as little as one plot, which the minimum size for Chia is k=32, or 101.3GiB/108.8GB. Farmers with a small amount of capacity, and therefore an extremely low chance to win a block reward, will most often choose to join a pool. 
 
