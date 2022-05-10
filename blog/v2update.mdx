@@ -1,0 +1,20 @@
+---
+slug: blog
+title: Chiapower v2 update
+authors: [jm]
+tags: [Chiapower]
+date: 2021-07-21T10:00
+---
+
+Rev 2.0 Changelog
+
+More than 3 months of observed Netspace growth and observations
+Initial growth (phase 1) of the Chia network was dominated by newly purchased high capacity 3.5in nearline HDDs, by early adopter farmers (Source: IDC, Seagate, WD). Avg capacity could be as high as 15TB
+Phase 2 of growth will be dominated by smaller farmers, pools, coming mostly from underutilized storage (Source: IDC)
+Include 6 & 8TB into low cap avg range for power consumption
+Integrate plotting power into energy consumption by assuming the life of a plot and amortizing the energy used to create it over the lifetime of the plot. Use real measured data and power consumption of chia community plotters to get a range for power consumption
+Add annual energy in TWh, compare vs BTC & ETH using digiconimist (cbeci still great but recent China policy changes not reflected in annual consumption avg)
+This is a link to a working model (includes legacy calculations and estimates in other tabs)
+
+The original model estimated Netspace growth based on the initial estimate, growth rate, and total storage market size for the upper limit of growth. The Chia team reviewed a very early version in a community Zoom call: Farming and Electricity Usage in Chia.
+The Chiapower 2.0 model takes more than 3 months of observed Netspace growth, industry analyst reports, and first-hand reporting directly from the HDD vendors on the capacity mix and increased demand for HDDs attributed to Chia. The total power consumption on the Chia network can be estimated by taking the total Netspace (similar to hashing power in bitcoin) and modeling the power consumption of the storage devices (farming) and the energy consumed to create the data (plotting). This is a similar methodology to the Cambridge Bitcoin Electricity Consumption Index, where most likely mining hardware is known, and electricity cost is estimated, and the total power consumption of the bitcoin network is estimated using a low and high estimate of reference mining hardware. Estimating a mix of common reference hardware farmers using hard disk drives (HDDs) and solid state drives (SSDs) by what is economical for Chia farming will depend on the capital expenditures of the hardware (CapEx) and operational expenditures for power, cooling, networking, and data center efficiency. Storage power efficiency is measured in TB/W which includes the overhead of the supporting hardware infrastructure to host the storage devices, but the largest upfront cost in Chia farming is the cost of the storage devices themselves. The Chia network also consumes energy during the plotting process, wherein the cryptographic data is generated prior to being able to farm for the proof of space and time.
