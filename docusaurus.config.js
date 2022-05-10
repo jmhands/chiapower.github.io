@@ -70,7 +70,7 @@ const config = {
         title: 'Chiapower',
         logo: {
           alt: 'Chiapower Logo',
-          src: 'img/chiapower.png',
+          src: 'img/chiapower-logo.svg',
         },
         items: [
           {
@@ -117,7 +117,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/jmhands/chiapower.github.io/',
               },
             ],
           },

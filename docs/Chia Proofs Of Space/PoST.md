@@ -7,7 +7,7 @@ keywords: [Chia, PoST, Proof of space, cryptocurrencies]
 
 ---
 
-# Proof of space and time
+# Proof of Space and Time
 
 Chia uses a consensus called proof of space and time, in which participants prove to the network that they are storing a certain amount of data through a process called farming. Proofs of space must be generated in a process called plotting, which is defined in the[ Chia proof of space construction document ](https://www.chia.net/assets/Chia_Proof_of_Space_Construction_v1.1.pdf)and first introduced in [Beyond Hellman](https://eprint.iacr.org/2017/893.pdf).
 
