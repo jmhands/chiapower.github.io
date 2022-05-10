@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkchiapower=self.webpackChunkchiapower||[]).push([[1713],{3457:function(e){e.exports=JSON.parse('[{"label":"update","permalink":"/blog/tags/update","count":1},{"label":"Chiapower","permalink":"/blog/tags/chiapower","count":1}]')}}]);

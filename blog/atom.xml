@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://chiapower.org/blog</id>
+    <title>Chiapower Blog</title>
+    <updated>2022-05-10T10:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://chiapower.org/blog"/>
+    <subtitle>Chiapower Blog</subtitle>
+    <icon>https://chiapower.org/img/chiapower.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Chiapower redesign]]></title>
+        <id>redesign</id>
+        <link href="https://chiapower.org/blog/redesign"/>
+        <updated>2022-05-10T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[When I built the chiapower.org energy model, Chia had not even launched the mainnet. It is almost impossible to think of how fast the Netspace scaled after the launch, trying to update assumptions during exponential growth. It is fair to say I know a lot more about hard drive energy consumption and idle power states than I did a year ago. I have a deep understanding of the market dynamics between the xch price, Netspace, which drive power consumption. I have learned about sustainability and circular business models from legends in this space, and how to perform a life cycle assessment to understand the carbon impact of a product.]]></summary>
+        <content type="html"><![CDATA[<p>When I built the chiapower.org energy model, Chia had not even launched the mainnet. It is almost impossible to think of how fast the Netspace scaled after the launch, trying to update assumptions during exponential growth. It is fair to say I know a lot more about hard drive energy consumption and idle power states than I did a year ago. I have a deep understanding of the market dynamics between the xch price, Netspace, which drive power consumption. I have learned about sustainability and circular business models from legends in this space, and how to perform a life cycle assessment to understand the carbon impact of a product.</p><p>At the time of the release of the website, I based the research on the best-in-class energy models from CBECI and Digiconomist for blockchains. It is clear that energy alone is not enough now as sustainability and the future of cryptocurrencies like Proof of Work are being discussed on a global stage. I will be working to update the chiapower model and Chia sustainability pages with the best research I can do, and answer questions for the broader ecosystem trying to learn more about what sustainability means to the Chia blockchain.</p>]]></content>
+        <author>
+            <name>Jonmichael Hands</name>
+            <uri>https://chia.net</uri>
+        </author>
+        <category label="update" term="update"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Chiapower v2 update]]></title>
+        <id>blog</id>
+        <link href="https://chiapower.org/blog/blog"/>
+        <updated>2021-07-21T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Rev 2.0 Changelog]]></summary>
+        <content type="html"><![CDATA[<p>Rev 2.0 Changelog</p><p>More than 3 months of observed Netspace growth and observations
+Initial growth (phase 1) of the Chia network was dominated by newly purchased high capacity 3.5in nearline HDDs, by early adopter farmers (Source: IDC, Seagate, WD). Avg capacity could be as high as 15TB
+Phase 2 of growth will be dominated by smaller farmers, pools, coming mostly from underutilized storage (Source: IDC)
+Include 6 &amp; 8TB into low cap avg range for power consumption
+Integrate plotting power into energy consumption by assuming the life of a plot and amortizing the energy used to create it over the lifetime of the plot. Use real measured data and power consumption of chia community plotters to get a range for power consumption
+Add annual energy in TWh, compare vs BTC &amp; ETH using digiconimist (cbeci still great but recent China policy changes not reflected in annual consumption avg)
+This is a link to a working model (includes legacy calculations and estimates in other tabs)</p><p>The original model estimated Netspace growth based on the initial estimate, growth rate, and total storage market size for the upper limit of growth. The Chia team reviewed a very early version in a community Zoom call: Farming and Electricity Usage in Chia.
+The Chiapower 2.0 model takes more than 3 months of observed Netspace growth, industry analyst reports, and first-hand reporting directly from the HDD vendors on the capacity mix and increased demand for HDDs attributed to Chia. The total power consumption on the Chia network can be estimated by taking the total Netspace (similar to hashing power in bitcoin) and modeling the power consumption of the storage devices (farming) and the energy consumed to create the data (plotting). This is a similar methodology to the Cambridge Bitcoin Electricity Consumption Index, where most likely mining hardware is known, and electricity cost is estimated, and the total power consumption of the bitcoin network is estimated using a low and high estimate of reference mining hardware. Estimating a mix of common reference hardware farmers using hard disk drives (HDDs) and solid state drives (SSDs) by what is economical for Chia farming will depend on the capital expenditures of the hardware (CapEx) and operational expenditures for power, cooling, networking, and data center efficiency. Storage power efficiency is measured in TB/W which includes the overhead of the supporting hardware infrastructure to host the storage devices, but the largest upfront cost in Chia farming is the cost of the storage devices themselves. The Chia network also consumes energy during the plotting process, wherein the cryptographic data is generated prior to being able to farm for the proof of space and time.</p>]]></content>
+        <author>
+            <name>Jonmichael Hands</name>
+            <uri>https://chia.net</uri>
+        </author>
+        <category label="Chiapower" term="Chiapower"/>
+    </entry>
+</feed>
