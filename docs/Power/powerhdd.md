@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
+title: Power Requirements for Hard Drives
 ---
-# Power Requirements for Hard Drives
 
 The Chia farming process is [very lightweight](https://docs.chia.net/docs/15resources/Storage_farming), requiring very little disk io by only having to perform a [proof quality check](https://docs.chia.net/docs/03consensus/proof-of-space/#farming) on most lookups, and through a mechanism called the plot filter which reduces the io by a factor of the constant. In Chia the plot filter is currently set to 512, meaning that on every challenge a plot has a 1/512 chance of being eligible. Although the amount of data transferred is very low, the frequency of data access depends on the size of the plots constructed and number of plots per drive (capacity per disk), measured with a K value, with the minimum K value = 32 consisting of ~108GB (~101GiB. Most farmers use the minimum required K value for the network operation due to the ease of plotting and the disk is accessed frequently, but still only transfers a small amount of data. These parameters dictate power savings depending on the device type used for farming since SSD and HDD have very different power states and latency profiles.
 
