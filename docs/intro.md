@@ -16,4 +16,4 @@ Storage is a perfect medium for blockchain security being both cryptographically
 - chiapower.org (this site)
 
 
-[Chia Network, Inc.](https://www.chia.net/), CHIA™, the CHIA BLOCKCHAIN™, the CHIA PROTOCOL™, CHIALISP™ and the “leaf Logo” (including the leaf logo alone when it refers to or indicates Chia), are trademarks or registered trademarks of Chia Network, Inc., a Delaware corporation, used under license.
+[Chia Network Inc.](https://www.chia.net/), CHIA™, the CHIA BLOCKCHAIN™, the CHIA PROTOCOL™, CHIALISP™ and the “leaf logo” (including the leaf logo alone when it refers to or indicates Chia), are trademarks or registered trademarks of Chia Network Inc., a Delaware corporation, used under license.
