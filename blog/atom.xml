@@ -9,7 +9,7 @@
     <icon>https://chiapower.org/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Chiapower redesign]]></title>
-        <id>redesign</id>
+        <id>https://chiapower.org/blog/redesign</id>
         <link href="https://chiapower.org/blog/redesign"/>
         <updated>2022-05-10T10:00:00.000Z</updated>
         <summary type="html"><![CDATA[When I built the chiapower.org energy model, Chia had not even launched the mainnet. It is almost impossible to think of how fast the Netspace scaled after the launch, trying to update assumptions during exponential growth. It is fair to say I know a lot more about hard drive energy consumption and idle power states than I did a year ago. I have a deep understanding of the market dynamics between the xch price, Netspace, which drive power consumption. I have learned about sustainability and circular business models from legends in this space, and how to perform a life cycle assessment to understand the carbon impact of a product.]]></summary>
@@ -22,7 +22,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Chiapower v2 update]]></title>
-        <id>blog</id>
+        <id>https://chiapower.org/blog/blog</id>
         <link href="https://chiapower.org/blog/blog"/>
         <updated>2021-07-21T10:00:00.000Z</updated>
         <summary type="html"><![CDATA[Rev 2.0 Changelog]]></summary>
