@@ -1,6 +1,6 @@
 ---
-title: Chiapower Energy Model
-description: Chiapower Energy Model
+title: Chiapower Energy Model, original
+description: Chiapower Energy Model, original
 keywords: [Chia, Farming, Hardware, HDD, SSD, TCO, Power, Energy, Cryptocurrencies]
 ---
 
