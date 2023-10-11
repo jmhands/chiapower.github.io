@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 
-function ChartComponent() {
+function HddChart() {
     const chartRef = useRef(null);
 
     useEffect(() => {
@@ -61,4 +61,57 @@ function ChartComponent() {
     return <canvas ref={chartRef} width="400" height="200"></canvas>;
 }
 
-export default ChartComponent;
+function EnergyChart() {
+    const chartRef = useRef(null);
+
+    useEffect(() => {
+        if (chartRef && chartRef.current) {
+            const ctx = chartRef.current.getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Bitcoin Energy Use', 'Dogecoin Energy Use', 'Chia (today)'],
+                    datasets: [{
+                        label: 'Annual Energy Use (TWh)',
+                        data: [121.50, 2.26, 0.13],
+                        backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(75, 192, 192, 0.2)'],
+                        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(255, 159, 64, 1)', 'rgba(75, 192, 192, 1)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Annual Energy Use'
+                    },
+                    scales: {
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Cryptocurrency'
+                            }
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'TWh'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+    }, []);
+
+    return <canvas ref={chartRef} width="400" height="200"></canvas>;
+}
+
+export { HddChart, EnergyChart };

@@ -14,12 +14,8 @@ Key takeaway is that ion time / space tradeoffs, plot size decreases linearly wh
 
 Plot compression is available from Chia through Bladebit and the official Chia blockchain application as of Chia version 2.0, and through 3rd party plotting and farming software such as Gigahorse and nossd.
 
-Today's maximum plot compression is around 50% of the total plot size. We use a TCO model with various inputs of compute cost and power overhead to determine which levels of compression are optimal for average and competitive farmers.
-Impact to power
-Plot compression increases the individual farmers power consumption, but has a limited effect on the overall Chia Netspace power consumption.
-
 # GPU plotting
 GPUs make plotting 2.5x more efficient than the previous most efficient in memory plotting with CPU, and 5x more efficient than desktop plotting. We are measuring the efficiency in energy (kWh) per terabyte plotted. This means farmers can get their space plotted faster, reduce the electricity cost for plotting, and reduce the global energy consumption for plotting. We use a weighted average of CPU and GPU plotting efficiency to determine the amount of power being used to plot, and with new plot compression formats we decrease the lifetime of a plot from 5 years to 2.5 years.
 
 # Plot Grinding
-We can determine if there is any part of the Netspace that is spoofed by plot grinding by looking at the economics. No known plot grinding software is generally available, everything was theoretical in the January blog from Chia Network.
+We can determine if there is any part of the Netspace that is spoofed by plot grinding by looking at the economics. No known plot grinding software is generally available, everything was theoretical in the [January blog](https://www.chia.net/2023/01/20/gpu-plotting-is-real-and-very-fast/) from Chia Network.

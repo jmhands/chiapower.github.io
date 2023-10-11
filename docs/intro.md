@@ -3,16 +3,21 @@ sidebar_position: 1
 slug: /
 title: Intro
 ---
+import { EnergyChart } from '@site/src/components/ChartComponent';
 
 Storage is a perfect medium for blockchain security being both cryptographically [verifiable and scarce](https://docs.chia.net/docs/03consensus/consensus_intro). Storage is a commodity with a large market and multiple major global players. It is power-efficient and scalable and can incentivize the circular economy.
 
 [Chia](https://chia.net/) is the solution to the "Proof of Work" energy problem.
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQTo_q1WX68ONeRJZuHsdueYfgv71o3qmrXCwNQ-UScBSmLuHI781iRMXpsVntueyI2-DpS_PHpK6oK/pubchart?oid=1357003038&amp;format=interactive"></iframe>
+<EnergyChart />
 
-- [Recalibrating global data center energy-use estimates](https://doi.org/10.1126/science.aba3758)
+| Annual Energy Use   | TWh    | Source                                                                                                         | Date Updated |
+| ------------------- | ------ | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| Bitcoin Energy Use  | 121.50 | [https://digiconomist.net/bitcoin-energy-consumption](https://digiconomist.net/bitcoin-energy-consumption)     | 9/28/2023    |
+| Dogecoin Energy Use | 2.26   | [https://digiconomist.net/dogecoin-energy-consumption/](https://digiconomist.net/dogecoin-energy-consumption/) | 9/28/2023    |
+| Chia (today)        | 0.13   | this spreadsheet                                                                                               | 10/10/2023   |
+
 - [Digiconomist Bitcoin Energy Consumption Index](https://digiconomist.net/bitcoin-energy-consumption/)
-- [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption)
 - chiapower.org (this site)
 
 
