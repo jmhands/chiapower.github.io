@@ -73,7 +73,7 @@ function EnergyChart() {
                     labels: ['Bitcoin Energy Use', 'Dogecoin Energy Use', 'Chia (today)'],
                     datasets: [{
                         label: 'Annual Energy Use (TWh)',
-                        data: [121.50, 2.26, 0.13],
+                        data: [121.50, 2.26, 0.15],
                         backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(75, 192, 192, 0.2)'],
                         borderColor: ['rgba(255, 99, 132, 1)', 'rgba(255, 159, 64, 1)', 'rgba(75, 192, 192, 1)'],
                         borderWidth: 1
